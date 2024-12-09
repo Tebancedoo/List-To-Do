@@ -3,10 +3,10 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #fcf8f8;
+    --foreground: #e2d8d8;
   }
 }
 
@@ -30,13 +30,273 @@ body {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   html {
-    color-scheme: dark;
+    color-scheme: white;
   }
 }
+
+input {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+h1{
+  text-align: center;
+  position: static;
+  
+}
+
+.fc-header-toolbar {
+  display: inline-block;
+  padding: 4px 4px;
+  /* Espaciado entre elementos, equivalente a `space-x-8` en Tailwind */
+  margin-right: 2rem;
+}
+
+.fc-day {
+  margin: 2rem;
+}
+
+.fc-scrollgrid-sync-table {
+  width: 100%;
+}
+
+.fc-view {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1024px) { /* lg */
+  .fc-view {
+    height: 75%;
+  }
+}
+
+@media (min-width: 1280px) { /* xl */
+  .fc-view {
+    height: 66.67%;
+  }
+}
+
+.fc-h-event {
+  background-color: #7c3aed; /* bg-violet-500 */
+  border: 1px solid #6b21a8; /* border-violet-600 */
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #f3e8ff; /* bg-violet-100 */
+}
+
+.fc .fc-button {
+  background-color: #6b21a8; /* bg-violet-800 */
+  transition: background-color 0.3s ease;
+}
+
+.fc .fc-button:hover {
+  background-color: #4c1d95; /* hover:bg-violet-900 */
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  background-color: #9333ea; /* bg-violet-600 */
+}
+
+.fc .fc-button-primary:disabled {
+  background-color: #9333ea; /* bg-violet-600 */
+}
+
+.fc-v-event {
+  background-color: #7c3aed; /* bg-violet-500 */
+  border: 1px solid #6b21a8; /* border-violet-600 */
+}
+
+
+/* Estilos del contenedor del formulario */
+.form-container {
+  margin-top: 0.5rem;
+  width: 50%; /* Esto hace que el contenedor ocupe el 50% de la pantalla */
+}
+
+/* Estilos del input */
+.custom-input {
+  display: block;
+  width: 100%;
+  border-radius: 0.375rem;
+  border-width: 0;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  color: #1f2937; /* Gris oscuro */
+  box-shadow: 5 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 1 1 1 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  color: #d1d5db; /* Gris claro para texto del placeholder */
+  font-size: 0.875rem; /* Tamaño pequeño en pantallas sm */
+  line-height: 1.5rem;
+}
+
+.custom-input:focus {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.custom-input:focus:ring-inset {
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.custom-input:focus:ring-violet-600 {
+  box-shadow: 0 0 0 2px rgba(138, 99, 255, 1); /* Violet color */
+}
+
+/* Estilos del contenedor del formulario */
+.form-container.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.form-container.sm\:mt-6 {
+  margin-top: 1.5rem;
+}
+
+.form-container.sm\:grid {
+  display: grid;
+}
+
+.form-container.sm\:grid-flow-row-dense {
+  grid-auto-flow: dense;
+}
+
+.form-container.sm\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form-container.sm\:gap-3 {
+  gap: 0.75rem;
+}
+
+/* Estilos del contenedor con fondo blanco */
+/* Estilos del contenedor del formulario */
+.form-container {
+  margin-top: 0.5rem;
+  width: 50%; /* Esto hace que el contenedor ocupe el 50% de la pantalla */
+}
+
+/* Estilos del input */
+.custom-input {
+  display: block;
+  width: 100%;
+  border-radius: 0.375rem;
+  border-width: 0;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  color: #1f2937; /* Gris oscuro */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  color: #a3a4a5; /* Gris claro para texto del placeholder */
+  font-size: 0.875rem; /* Tamaño pequeño en pantallas sm */
+  line-height: 1.5rem;
+}
+
+.custom-input:focus {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.custom-input:focus:ring-inset {
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.custom-input:focus:ring-violet-600 {
+  box-shadow: 0 0 0 2px rgba(138, 99, 255, 1); /* Violet color */
+}
+
+/* Estilos del contenedor del modal */
+.mt-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 20; /* Asegura que se superponga */
+  width: 40%; /* Tamaño del modal */
+  max-width: 400px; /* Tamaño máximo para pantallas grandes */
+  padding: 1.5rem; /* Espaciado interno */
+  background-color: white; /* Fondo blanco */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); /* Sombra para mayor profundidad */
+  transform: translate(-50%, -50%);
+  text-align: center; /* Centrar el contenido */
+}
+
+/* Icono de confirmación */
+.mt-2 .success-icon {
+  display: block;
+  margin: 0 auto 1rem; /* Centrado y espaciado inferior */
+  font-size: 2rem; /* Tamaño grande */
+  color: #22c55e; /* Color verde */
+}
+
+/* Título del modal */
+.mt-2 h2 {
+  font-size: 1.25rem; /* Tamaño de fuente */
+  font-weight: 600; /* Negrita */
+  margin-bottom: 0.75rem; /* Espaciado inferior */
+  color: #1f2937; /* Color del texto */
+}
+
+/* Campo de entrada */
+.mt-2 input[type="text"] {
+  width: 100%; /* Ancho completo */
+  padding: 0.5rem 0.75rem; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño del texto */
+  border: 1px solid #d1d5db; /* Borde gris claro */
+  border-radius: 0.375rem; /* Bordes redondeados */
+  margin-bottom: 1rem; /* Espaciado inferior */
+  outline: none;
+}
+
+.mt-2 input[type="text"]:focus {
+  border-color: #7c3aed; /* Color violeta al enfocar */
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25); /* Sombra violeta */
+}
+
+/* Contenedor de los botones */
+.mt-2 .button-container {
+  display: flex;
+  justify-content: space-between; /* Botones separados */
+  gap: 1rem; /* Espaciado entre los botones */
+}
+
+/* Botón Crear */
+.submit-btn {
+  flex: 1; /* Ocupa el mismo espacio que el otro botón */
+  background-color: #7c3aed; /* Color violeta */
+  color: white;
+  font-weight: 600; /* Negrita */
+  padding: 0.5rem 0.75rem; /* Espaciado interno */
+  border-radius: 0.375rem; /* Bordes redondeados */
+  border: none; /* Sin borde */
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #9333ea; /* Color más oscuro al pasar el mouse */
+}
+
+/* Botón Cancelar */
+.cancel-btn {
+  flex: 1; /* Ocupa el mismo espacio que el otro botón */
+  background-color: white; /* Fondo blanco */
+  color: #374151; /* Color del texto */
+  font-weight: 600; /* Negrita */
+  padding: 0.5rem 0.75rem; /* Espaciado interno */
+  border-radius: 0.375rem; /* Bordes redondeados */
+  border: 1px solid #d1d5db; /* Borde gris */
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: #f9fafb; /* Fondo gris claro al pasar el mouse */
+}
+
+
+/*Overlay*/
+
+
+
